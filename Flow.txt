@@ -1,0 +1,72 @@
++-----------------+          +-----------------+          +-------------------+
+| InputProducts   |          | App.jsx (State) |          | ListProducts      |
+| (form tambah)   | <------> | products[]      | <------> | (tampilkan        |
+|                 |          | archived[]      |          | archived & default)|
++-----------------+          +-----------------+          +-------------------+
+       |                             |                              |
+       | (submit produk baru)        |                              |
+       +---------------------------->|                              |
+                                     |                              |
+                                     |                              |
+                                     v                              |
+                              simpan ke localStorage                |
+                                                                    |
+                                                                    |
++-------------------+  klik "Archive" di InputProducts   +-------------------+
+| products[]        |---------------------------------->| archived[]        |
+| - produk aktif    |                                   | - produk tersimpan |
++-------------------+                                   +-------------------+
+                                                                    |
+                                                                    |
+                 +--------------------------------------------------+
+                 | klik tombol "Reject" di ListProducts             |
+                 v
++-------------------+                                   +-------------------+
+| products[]        |<---------------------------------| archived[]        |
+| - produk aktif    |   handleReject(product)          | - dikurangi       |
++-------------------+                                   +-------------------+
+
+
+<------------------------------------------Struktur------------------------------------------>
+
+App.jsx (root, simpan semua state & fungsi global)
+│
+├── Navbar (dapat props: user, onLogout)
+│
+├── Home (hanya render halaman Home)
+│   ├── props:
+│   │   • filteredHome         ← dari state App
+│   │   • flippedHome          ← dari state App
+│   │   • searchHome           ← dari state App
+│   │   • handleSearchHome     ← fungsi di App
+│   │   • handleFlipHome       ← fungsi di App
+│   │   • formatPrice          ← fungsi di App
+│   │   • user                 ← dari state App
+│   │
+│   └── render UI (search bar + produk + flip card)
+│
+├── Login (form login/logout)
+│   ├── props:
+│   │   • onLogin              ← fungsi di App
+│   │   • user                 ← dari state App
+│   └── gunakan onLogin() saat submit
+│
+├── InputProducts (kelola produk aktif)
+│   ├── props:
+│   │   • products             ← dari state App
+│   │   • setProducts          ← fungsi di App
+│   │   • archivedProducts     ← dari state App
+│   │   • setArchivedProducts  ← fungsi di App
+│   │   • user                 ← dari state App
+│   └── gunakan setProducts() & setArchivedProducts()
+│
+├── ListProducts (lihat archived + default)
+│   ├── props:
+│   │   • products             ← dari state App
+│   │   • setProducts          ← fungsi di App
+│   │   • archivedProducts     ← dari state App
+│   │   • setArchivedProducts  ← fungsi di App
+│   │   • user                 ← dari state App
+│   └── render kartu + hapus/reject/archive
+│
+└── Footer (tidak butuh props, statis)
