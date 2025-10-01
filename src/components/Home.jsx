@@ -86,10 +86,10 @@ class Home extends Component {
         {/* ✅ Slideshow Carousel */}
         <Carousel className="mb-4 shadow-sm">
           <Carousel.Item>
-            <img className="d-block w-100" src="/foto/b4.jpg" alt="Slide 1" style={{ maxHeight: '550px', objectFit: 'cover' }} />
+            <img className="d-block w-100" src="foto/b4.jpg" alt="Slide 1" style={{ maxHeight: '350px', objectFit: 'cover' }} />
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100" src="/foto/b3.jpg" alt="Slide 2" style={{ maxHeight: '550px', objectFit: 'cover' }} />
+            <img className="d-block w-100" src="foto/b3.jpg" alt="Slide 2" style={{ maxHeight: '350px', objectFit: 'cover' }} />
           </Carousel.Item>
         </Carousel>
 
@@ -111,7 +111,7 @@ class Home extends Component {
                 <ReactCardFlip isFlipped={flippedHome[product.id]} flipDirection="horizontal">
                   <div onClick={() => handleFlipHome(product.id)} style={{ cursor: 'pointer' }}>
                     <Card className="h-100 shadow-sm">
-                      {product.img && <Card.Img variant="top" src={product.img} alt={product.name} style={{ height: '200px', objectFit: 'cover' }} />}
+                      {product.img && <Card.Img variant="top" src={product.img} alt={product.name} style={{ height: '100px', objectFit: 'cover' }} />}
                       <Card.Body>
                         <Card.Title>{product.name}</Card.Title>
                         <p className="fw-bold text-primary">{formatPrice(product.price)}</p>

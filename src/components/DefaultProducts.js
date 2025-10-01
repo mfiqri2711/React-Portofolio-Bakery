@@ -4,7 +4,7 @@ const DefaultProducts = [
     name: 'Brownis',
     desc: 'Brownis Double Chocolate',
     price: 200,
-    img: '/foto/p4.jpg', // ✅ ada di public/foto/
+    img: 'foto/p4.jpg', // ✅ ada di public/foto/
     quantity: 100,
     isDefault: true,
   },
@@ -13,7 +13,7 @@ const DefaultProducts = [
     name: 'Chocolate',
     desc: 'Chocolate',
     price: 200,
-    img: '/foto/p5.jpg', // ✅ ada di public/foto/
+    img: 'foto/p5.jpg', // ✅ ada di public/foto/
     quantity: 100,
     isDefault: true,
   },
@@ -22,7 +22,7 @@ const DefaultProducts = [
     name: 'Brownis',
     desc: 'Brownis Extra Chocolate',
     price: 200,
-    img: '/foto/b7.jpg',
+    img: 'foto/b7.jpg',
     quantity: 100,
     isDefault: true,
   },
@@ -31,7 +31,7 @@ const DefaultProducts = [
     name: 'Brownis',
     desc: 'Brownis',
     price: 200,
-    img: '/foto/b9.jpg',
+    img: 'foto/b9.jpg',
     quantity: 100,
     isDefault: true,
   },
@@ -40,7 +40,7 @@ const DefaultProducts = [
     name: 'Brownis',
     desc: 'Brownis',
     price: 200,
-    img: '/foto/b10.jpg',
+    img: 'foto/b10.jpg',
     quantity: 100,
     isDefault: true,
   },
@@ -49,7 +49,7 @@ const DefaultProducts = [
     name: 'Donut',
     desc: 'Donut',
     price: 200,
-    img: '/foto/p2.jpg',
+    img: 'foto/p2.jpg',
     quantity: 100,
     isDefault: true,
   },
@@ -58,7 +58,7 @@ const DefaultProducts = [
     name: 'Donut',
     desc: 'Donut',
     price: 200,
-    img: '/foto/p4.jpg', // ✅ pastikan ini beda kalau mau unik
+    img: 'foto/p4.jpg', // ✅ pastikan ini beda kalau mau unik
     quantity: 100,
     isDefault: true,
   },

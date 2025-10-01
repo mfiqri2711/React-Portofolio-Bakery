@@ -149,7 +149,7 @@ class ListProducts extends Component {
                 <ReactCardFlip isFlipped={flipped[product.id]} flipDirection="horizontal">
                   <div onClick={() => this.handleFlip(product.id)} style={{ cursor: 'pointer' }}>
                     <Card className="h-100 shadow-sm">
-                      {product.img && <Card.Img variant="top" src={product.img} alt={product.name} style={{ height: '200px', objectFit: 'cover' }} />}
+                      {product.img && <Card.Img variant="top" src={product.img} alt={product.name} style={{ height: '100px', objectFit: 'cover' }} />}
                       <Card.Body>
                         <Card.Title>{product.name}</Card.Title>
                         <p className="fw-bold text-primary">{this.formatPrice(product.price)}</p>
